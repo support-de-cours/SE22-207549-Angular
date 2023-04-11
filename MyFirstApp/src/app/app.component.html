@@ -1,0 +1,32 @@
+<h2>Data Binding</h2>
+
+{{ title }}
+
+<hr>
+
+
+<h2>Property Binding</h2>
+
+<!-- {{ image_url }} <br> -->
+
+<img [src]="image_url" [alt]="title">
+
+
+<hr>
+
+
+<h2>Event Binding</h2>
+
+<button (click)="sayHello()">Obi Wan say Hello</button>
+<button (click)="changeTitle()">Change the title</button>
+
+<hr>
+
+
+<h2>Two Way Binding</h2>
+
+<div>
+  Firstname: {{ firstname }}
+</div>
+
+<input type="text" [(ngModel)]="firstname">

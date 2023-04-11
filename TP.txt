@@ -1,0 +1,8 @@
+Création d'un projet Angular : "ClickCounter"
+
+- un bouton "-", qui décrémente le compteur
+- un bouton "+", qui incrémente le compteur
+- Affichage du nombre de click (0 par défaut)
+
+- Limiter le compteur à +10 et -10
+- Ajouter bootstrap
