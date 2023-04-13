@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "My first book",
+      "description": "This is an awesome book",
+      "price": 99.99
+    },
+    {
+      "id": 2,
+      "title": "Just a good book",
+      "description": "no description",
+      "price": 5.99
+    },
+    {
+      "title": "This is my third book",
+      "description": "pas de description",
+      "price": 15,
+      "id": 3
+    },
+    {
+      "title": "This is my third book",
+      "description": "pas de description",
+      "price": 15,
+      "id": 4
+    }
+  ]
+}
