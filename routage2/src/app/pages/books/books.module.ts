@@ -6,19 +6,21 @@ import { ReadComponent } from './read/read.component';
 import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
 import { BooksRoutingModule } from './books-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
 @NgModule({
   declarations: [
-    // IndexComponent,
-    // CreateComponent,
-    // ReadComponent,
-    // UpdateComponent,
-    // DeleteComponent
+    IndexComponent,
+    CreateComponent,
+    ReadComponent,
+    UpdateComponent,
+    DeleteComponent
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     BooksRoutingModule
   ]
 })
