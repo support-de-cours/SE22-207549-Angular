@@ -11,11 +11,11 @@ import { BooksRoutingModule } from './books-routing.module';
 
 @NgModule({
   declarations: [
-    IndexComponent,
-    CreateComponent,
-    ReadComponent,
-    UpdateComponent,
-    DeleteComponent
+    // IndexComponent,
+    // CreateComponent,
+    // ReadComponent,
+    // UpdateComponent,
+    // DeleteComponent
   ],
   imports: [
     CommonModule,
