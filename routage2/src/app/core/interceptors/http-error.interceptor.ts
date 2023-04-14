@@ -37,7 +37,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
 
       alert(errorMessage);
 
-      return throwError(errorMessage);
+      return throwError(() => errorMessage);
       // return throwIfEmpty(errorMessage);
       
     }));
