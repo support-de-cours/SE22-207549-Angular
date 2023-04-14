@@ -7,6 +7,7 @@ import { BooksModule } from './pages/books/books.module';
 import { DataTypeExempleComponent } from './data-type-exemple/data-type-exemple.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ApiEndpointInterceptor } from './core/interceptors/api-endpoint.interceptor';
+import { HttpErrorInterceptor } from './core/interceptors/http-error.interceptor';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,11 @@ import { ApiEndpointInterceptor } from './core/interceptors/api-endpoint.interce
     {
       provide: HTTP_INTERCEPTORS,
       useClass: ApiEndpointInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptor,
       multi: true
     }
   ],
