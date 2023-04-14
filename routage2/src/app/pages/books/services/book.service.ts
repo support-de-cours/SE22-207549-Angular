@@ -10,10 +10,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BookService {
 
-  private _books = new BehaviorSubject<any>([{
-    title: "My default book",
-    price: 999.99
-  }]);
+  private _books = new BehaviorSubject<any>([]);
+  private _book = new BehaviorSubject<any>({});
 
   constructor(
     private httpClient: HttpClient
@@ -29,9 +27,26 @@ export class BookService {
       })
   }
 
+  getBookFromDb(id:number)
+  {
+    // Reset _book
+    this._book.next({});
+
+    // Get a book data
+    this.httpClient
+      .get(`books/${id}`)
+      .subscribe(response => {
+        this._book.next( response );
+      })
+  }
+
   get books()
   {
     return this._books;
+  }
+  get book()
+  {
+    return this._book;
   }
 
 }
