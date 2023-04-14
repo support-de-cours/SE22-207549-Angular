@@ -23,6 +23,42 @@
       "description": "pas de description",
       "price": 15,
       "id": 4
+    },
+    {
+      "title": "book test",
+      "description": "desc test",
+      "price": "20",
+      "id": 5
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": "",
+      "id": 6
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": "",
+      "id": 7
+    },
+    {
+      "title": "zertyuik",
+      "description": "",
+      "price": "50",
+      "id": 8
+    },
+    {
+      "title": "new book",
+      "description": "azertyui",
+      "price": "32",
+      "id": 9
+    },
+    {
+      "title": "book with redirection test",
+      "description": "this is a redirect test",
+      "price": "20",
+      "id": 10
     }
   ]
 }

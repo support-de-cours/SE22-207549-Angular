@@ -1,1 +1,42 @@
-<p>create works!</p>
+<h2>Create your new book</h2>
+
+<form 
+    [formGroup]="bookForm"
+    (ngSubmit)="submitBook()"
+>
+
+    <!-- Book Title -->
+    <div class="form-control">
+        <label for="title">Book title</label>
+        <input 
+            type="text"
+            id="title"
+            formControlName="title"
+        >
+    </div>
+
+    <!-- Book Description -->
+    <div class="form-control">
+        <label for="description">Book description</label>
+        <textarea 
+            id="description"
+            formControlName="description"
+        ></textarea>
+    </div>
+
+    <!-- Book Price -->
+    <div class="form-control">
+        <label for="price">Book price</label>
+        <input 
+            type="text"
+            id="price"
+            formControlName="price"
+        >
+    </div>
+
+    <button 
+        [disabled]="!bookForm.valid"
+        type="submit"
+    >Create a new book</button>
+
+</form>

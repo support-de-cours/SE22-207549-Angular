@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BookInterface } from '../book-interface';
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 // const url = 'http://localhost:3000/books';
 
@@ -14,7 +15,8 @@ export class BookService {
   private _book = new BehaviorSubject<any>({});
 
   constructor(
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private router: Router
   ){}
 
   // Get books from database
@@ -37,6 +39,17 @@ export class BookService {
       .get(`books/${id}`)
       .subscribe(response => {
         this._book.next( response );
+      })
+  }
+
+  addBook(book:any)
+  {
+    this.httpClient
+      .post("books", book)
+      .subscribe((response: any) => {
+
+        this.router.navigate(['/books', response.id]);
+        
       })
   }
 
