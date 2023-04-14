@@ -61,6 +61,15 @@ export class DataTypeExempleComponent {
   //   brand: "Tesla",
   //   isElectrical: true,
   // }
-];
+  ];
+
+  public doSomething(): number
+  {
+    return 42;
+  }
+  public doAnotherSomething(): void
+  {
+    // ... 
+  }
 
 }

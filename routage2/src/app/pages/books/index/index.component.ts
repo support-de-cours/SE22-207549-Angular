@@ -13,11 +13,19 @@ export class IndexComponent implements OnInit {
 
   constructor(
     private bookService: BookService
-  ){}
+  ){
+    // this.bookService.getBooksFromDb()
+  }
 
   ngOnInit(): void {
-    // console.log( this.bookService.books );
-    this.bookService.books.subscribe( data => this.books = data )
+    this.bookService.books.subscribe( (data) => {
+      this.books = data
+    } );
+  }
+
+  getAllBooks()
+  {
+    this.bookService.getBooksFromDb()
   }
 
 }

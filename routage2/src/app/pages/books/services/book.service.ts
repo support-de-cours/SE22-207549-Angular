@@ -3,31 +3,30 @@ import { BookInterface } from '../book-interface';
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-const url = 'http://localhost:3000/books';
+// const url = 'http://localhost:3000/books';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookService {
 
-  private _books = new BehaviorSubject<any>([]);
+  private _books = new BehaviorSubject<any>([{
+    title: "My default book",
+    price: 999.99
+  }]);
 
   constructor(
     private httpClient: HttpClient
-  ){
-    this.getBooksFromDb();
-  }
+  ){}
 
   // Get books from database
   getBooksFromDb()
   {
-    setTimeout(() => {
-      this.httpClient
-        .get(url)
-        .subscribe(response => {
-          this._books.next( response )
-        })
-    }, 10000);
+    this.httpClient
+      .get("books")
+      .subscribe(response => {
+        this._books.next( response );
+      })
   }
 
   get books()
