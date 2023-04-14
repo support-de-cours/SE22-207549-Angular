@@ -17,6 +17,7 @@ export class ReadComponent implements OnInit {
     private route: ActivatedRoute,
     private bookService: BookService
   ){}
+
   
   ngOnInit(): void {
 
