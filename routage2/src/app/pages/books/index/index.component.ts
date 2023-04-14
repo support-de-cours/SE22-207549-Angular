@@ -9,7 +9,7 @@ import { BookService } from '../services/book.service';
 })
 export class IndexComponent implements OnInit {
 
-  public books: BookInterface[] = [];
+  public books: any[] = [];
 
   constructor(
     private bookService: BookService
@@ -17,7 +17,7 @@ export class IndexComponent implements OnInit {
 
   ngOnInit(): void {
     // console.log( this.bookService.books );
-    this.bookService.books.subscribe(data => this.books = data )
+    this.bookService.books.subscribe( data => this.books = data )
   }
 
 }

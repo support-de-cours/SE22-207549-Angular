@@ -21,11 +21,13 @@ export class BookService {
   // Get books from database
   getBooksFromDb()
   {
-    this.httpClient
-      .get(url)
-      .subscribe(response => {
-        this._books.next( response )
-      })
+    setTimeout(() => {
+      this.httpClient
+        .get(url)
+        .subscribe(response => {
+          this._books.next( response )
+        })
+    }, 10000);
   }
 
   get books()
